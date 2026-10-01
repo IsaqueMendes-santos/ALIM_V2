@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: alim
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 80
